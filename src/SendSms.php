@@ -43,6 +43,14 @@ class SendSms
     {
         $smsClientName = $this->config['defaultSms'];
 
+        if (empty($smsClientName)) {
+            $messages = [
+                'code' => '1',
+                'message' => '默认短信名称不能为空，请设置默认短信！',
+            ];
+            return $messages;
+        }
+
         $result = $this->$smsClientName($this->config[$smsClientName]['templateCode'][$templateCode], $phoneNumbers, $templateParam);
 
         return $result;
@@ -63,6 +71,28 @@ class SendSms
         $accessKeyId = $this->config['aliSms']['accessKeyId'];
         $accessKeySecret = $this->config['aliSms']['accessKeySecret'];
         $signName = $this->config['aliSms']['signName'];
+
+        if (empty($accessKeyId)) {
+            $messages = [
+                'code' => '1',
+                'message' => '阿里短信 accessKeyId 不能为空，请填写 accessKeyId ！',
+            ];
+            return $messages;
+        }
+        if (empty($accessKeySecret)) {
+            $messages = [
+                'code' => '1',
+                'message' => '阿里短信 accessKeySecret 不能为空，请填写 accessKeySecret ！',
+            ];
+            return $messages;
+        }
+        if (empty($signName)) {
+            $messages = [
+                'code' => '1',
+                'message' => '阿里短信签名不能为空，请填写短信签名 ！',
+            ];
+            return $messages;
+        }
 
         $smsObj = new AliSmsClient($accessKeyId, $accessKeySecret, $signName);
 
@@ -99,6 +129,14 @@ class SendSms
     public function yunpianSms($templateCode, $phoneNumbers, $templateParam)
     {
         $apikey = $this->config['yunpianSms']['apikey'];
+
+        if (empty($apikey)) {
+            $messages = [
+                'code' => '1',
+                'message' => '云片短信 apikey 不能为空，请填写 apikey ！',
+            ];
+            return $messages;
+        }
 
         // 是否批量发送
         $batchSend = false;
