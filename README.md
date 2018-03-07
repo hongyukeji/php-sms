@@ -26,7 +26,13 @@ $ composer require hongyukeji/php-sms dev-master
 
 > 云片短信教程 https://www.yunpian.com/doc/zh_CN/introduction/demos/php.html
 
+
+## 使用
+
+> 具体使用，请阅读 src/SendSms.php 文件
+
 ```php
+
 $config = [
     'defaultSms' => '',    // 默认短信
     'debug' => 'false',   // 调试模式
@@ -46,14 +52,10 @@ $config = [
         ],
     ],
 ];
-```
 
-## 使用
+$smsObj = new SendSms($config);
 
-> 具体使用，请阅读 src/SendSms.php 文件
-
-```php
-$result = Yii::$app->sms->send(
+$result = $smsObj->send(
     'verificationCode',
     '13800138000',
     ['code' => '123456', 'product' => 'name']
