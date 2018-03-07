@@ -18,9 +18,8 @@ $ composer require hongyukeji/php-sms
 $ composer require hongyukeji/php-sms dev-master
 ```
 
-## 配置
+## 短信教程
 
-* main.php / web.php 
 
 > 阿里短信教程 https://help.aliyun.com/document_detail/59210.html
 
