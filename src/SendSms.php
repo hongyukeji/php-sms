@@ -23,26 +23,6 @@ class SendSms
 
     public function __construct($config)
     {
-        /*$config = [
-            'defaultSms' => '',    // 默认短信
-            'debug' => 'false',   // 调试模式
-            'aliSms' => [
-                'accessKeyId' => '',
-                'accessKeySecret' => '',
-                'signName' => '',
-                'templateCode' => [
-                    'verificationCode' => '',
-                ],
-            ],
-            'yunpianSms' => [
-                'apikey' => '',
-                'signName' => '',
-                'templateCode' => [
-                    'verificationCode' => '',
-                ],
-            ],
-        ];*/
-
         $this->config = $config;
     }
 

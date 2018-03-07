@@ -27,33 +27,23 @@ $ composer require hongyukeji/php-sms dev-master
 > 云片短信教程 https://www.yunpian.com/doc/zh_CN/introduction/demos/php.html
 
 ```php
-return [
-    'components' => [
-    
-        // ```
-        'sms' => [
-            'class' => 'HongYuKeJi\Components\Sms\SendSms',
-            'config' => [
-                'defaultSms' => 'aliSms',    // 默认短信
-                'aliSms' => [
-                    'accessKeyId' => '',
-                    'accessKeySecret' => '',
-                    'signName' => '',
-                    'templateCode' => [
-                        'verificationCode' => '',
-                    ],
-                ],
-                'yunpianSms' => [
-                    'apikey' => '',
-                    'signName' => '',
-                    'templateCode' => [
-                        'verificationCode' => '',
-                    ],
-                ],
-            ],
+$config = [
+    'defaultSms' => '',    // 默认短信
+    'debug' => 'false',   // 调试模式
+    'aliSms' => [
+        'accessKeyId' => '',
+        'accessKeySecret' => '',
+        'signName' => '',
+        'templateCode' => [
+            'verificationCode' => '',
         ],
-        
-        // ```
+    ],
+    'yunpianSms' => [
+        'apikey' => '',
+        'signName' => '',
+        'templateCode' => [
+            'verificationCode' => '',
+        ],
     ],
 ];
 ```
