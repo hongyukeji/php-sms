@@ -1,0 +1,21 @@
+{
+    "name": "hongyukeji/php-sms",
+    "description": "This is a SMS sending component.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shadow",
+            "email": "admin@hongyuvip.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HongYuKeJi\\Components\\Sms\\": "src"
+        }
+    }
+}
