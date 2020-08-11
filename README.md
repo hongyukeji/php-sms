@@ -13,18 +13,6 @@
 <a href="https://packagist.org/packages/hongyukeji/sms"><img src="https://poser.pugx.org/hongyukeji/sms/license" alt="License"></a>
 </p>
 
-## Install
-
-```shell
-$ composer require hongyukeji/php-sms:*@dev
-```
-
-## Usage
-
-```
-
-```
-
 ## 特点
 
 - 支持全网络短信服务商
