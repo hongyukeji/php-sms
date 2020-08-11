@@ -7,10 +7,10 @@
 > 更多请点击 [https://www.hongyukeji.cn](https://www.hongyukeji.cn)
 
 <p align="center">
-<a href="https://packagist.org/packages/hongyukeji/sms"><img src="https://poser.pugx.org/hongyukeji/sms/v/stable" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/hongyukeji/sms"><img src="https://poser.pugx.org/hongyukeji/sms/downloads" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/hongyukeji/sms"><img src="https://poser.pugx.org/hongyukeji/sms/v/unstable" alt="Latest Unstable Version"></a>
-<a href="https://packagist.org/packages/hongyukeji/sms"><img src="https://poser.pugx.org/hongyukeji/sms/license" alt="License"></a>
+<a href="https://packagist.org/packages/hongyukeji/php-sms"><img src="https://poser.pugx.org/hongyukeji/php-sms/v/stable" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/hongyukeji/php-sms"><img src="https://poser.pugx.org/hongyukeji/php-sms/downloads" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/hongyukeji/php-sms"><img src="https://poser.pugx.org/hongyukeji/php-sms/v/unstable" alt="Latest Unstable Version"></a>
+<a href="https://packagist.org/packages/hongyukeji/php-sms"><img src="https://poser.pugx.org/hongyukeji/php-sms/license" alt="License"></a>
 </p>
 
 ## 特点
