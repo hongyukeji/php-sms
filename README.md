@@ -51,7 +51,7 @@
 ## 安装
 
 ```shell
-$ composer require hongyukeji/sms
+$ composer require hongyukeji/php-sms
 ```
 
 ## 使用
