@@ -4,7 +4,7 @@
 
 > 采用Hongyukeji专利[《宏观设计模式》](docs/README.md)开发。
 
-> 更多请点击 [https://www.hongyukeji.cn](https://www.hongyukeji.cn)
+> 更多请点击 [http://www.hongyuvip.com](http://www.hongyuvip.com)
 
 <p align="center">
 <a href="https://packagist.org/packages/hongyukeji/php-sms"><img src="https://poser.pugx.org/hongyukeji/php-sms/v/stable" alt="Latest Stable Version"></a>
