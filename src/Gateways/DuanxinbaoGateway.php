@@ -84,13 +84,48 @@ class DuanxinbaoGateway extends Gateway
     public function sendInternationalSms($mobile_number, $template_code, $template_params)
     {
         $this->smsapi = $this->wsmsapi;
+
+        // 接口说明 https://www.smsbao.com/openapi/299.html
+        // 接收的手机号;群发时多个手机号以逗号分隔，一次不要超过99个号码
+        //注：国际号码需包含国际地区前缀号码 格式必须是"+"号开头("+"号需要urlencode处理
+        //如：urlencode("+60901234567")否则会出现格式错误)
+
+        // 处理手机号 手机号判断是否存在 + 加号
+        if (is_array($mobile_number)) {
+            foreach ($mobile_number as $key => $val) {
+                $mobile_number[$key] = $this->handleMobileFormat($val);
+            }
+        } else {
+            $mobile_number = $this->handleMobileFormat($mobile_number);
+        }
+
         return $this->send($mobile_number, $template_code, $template_params);
     }
 
     public function batchSendInternationalSms($mobile_number, $template_code, $template_params)
     {
         $this->smsapi = $this->wsmsapi;
+        // 手机号处理
+        foreach ($mobile_number as $key => $val) {
+            $mobile_number[$key] = $this->handleMobileFormat($val);
+        }
         return $this->batchSend($mobile_number, $template_code, $template_params);
     }
 
+    /**
+     * 处理手机号格式
+     *
+     * @param $mobile_number
+     * @return string
+     */
+    public function handleMobileFormat($mobile_number)
+    {
+        $symbol = '+';
+        if (substr($mobile_number, 0, strlen($symbol)) === $symbol) {
+        } else {
+            $mobile_number = $symbol . $mobile_number;
+        }
+        $mobile_number = urlencode($mobile_number);
+        return $mobile_number;
+    }
 }
