@@ -14,7 +14,10 @@ use Hongyukeji\PhpSms\Gateways\Gateway;
  */
 class DuanxinbaoGateway extends Gateway
 {
+    // 国内短信API
     protected $smsapi = "http://api.smsbao.com/";
+    // 国际短信API
+    protected $wsmsapi = "https://api.smsbao.com/wsms/";
     protected $user;
     protected $pass;
     protected $signName;
@@ -77,4 +80,17 @@ class DuanxinbaoGateway extends Gateway
 
         return $result;
     }
+
+    public function sendInternationalSms($mobile_number, $template_code, $template_params)
+    {
+        $this->smsapi = $this->wsmsapi;
+        return $this->send($mobile_number, $template_code, $template_params);
+    }
+
+    public function batchSendInternationalSms($mobile_number, $template_code, $template_params)
+    {
+        $this->smsapi = $this->wsmsapi;
+        return $this->batchSend($mobile_number, $template_code, $template_params);
+    }
+
 }

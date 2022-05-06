@@ -18,15 +18,20 @@ class Gateway implements SmsInterface
     }
 
     /**
-     * @inheritDoc
+     * 发送短信
+     *
+     * @param $mobile_number
+     * @param $template_code
+     * @param $template_params
+     * @return array|mixed
      */
     public function send($mobile_number, $template_code, $template_params)
     {
         // TODO: Implement send() method.
         if (is_array($mobile_number)) {
             $response = $this->batchSend($mobile_number, $template_code, $template_params);
-        }else{
-            $response = [];
+        } else {
+            $response = array();
         }
 
         if ($response['status'] === '200') {
@@ -37,10 +42,41 @@ class Gateway implements SmsInterface
     }
 
     /**
-     * @inheritDoc
+     * 批量发送短信
+     *
+     * @param $mobile_number
+     * @param $template_code
+     * @param $template_params
+     * @return void
      */
     public function batchSend($mobile_number, $template_code, $template_params)
     {
         // TODO: Implement batchSend() method.
+    }
+
+    /**
+     * 发送国际短信
+     *
+     * @param $mobile_number
+     * @param $template_code
+     * @param $template_params
+     * @return void
+     */
+    public function sendInternationalSms($mobile_number, $template_code, $template_params)
+    {
+        // TODO: Implement sendInternationalSms() method.
+    }
+
+    /**
+     * 批量发送国际短信
+     *
+     * @param $mobile_number
+     * @param $template_code
+     * @param $template_params
+     * @return void
+     */
+    public function batchSendInternationalSms($mobile_number, $template_code, $template_params)
+    {
+        // TODO: Implement batchSendInternationalSms() method.
     }
 }
